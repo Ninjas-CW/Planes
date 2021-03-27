@@ -1,0 +1,524 @@
+/* GENERAL SETTINGS */
+
+@font-face {
+  font-family: "Raleway";
+  src: url("../fonts/Raleway-Regular.ttf");
+}
+
+body {
+  background-color: #fff;
+  color: #3f3f3f;
+  font: 14px / 28px;
+  font-family: "Raleway", arial;
+}
+
+h1 {
+  font-size: 52px;
+  letter-spacing: 4px;
+  margin-bottom: 20px;
+}
+
+/* GRID SETTINGS */
+
+.container {
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+}
+
+/* HOME SETTINGS */
+
+header .logo {
+  margin-right: auto;
+}
+
+header .logo img {
+  display: block;
+  height: 70px;
+}
+
+.menu li {
+  float: left;
+}
+
+.menu li a {
+  padding: 27px 17px;
+  display: block;
+  text-decoration: none;
+  letter-spacing: 2px;
+  color: #333;
+  transition: all 0.5s ease;
+}
+
+.menu li:hover a {
+  background-color: #500d16;
+  color: white;
+}
+
+/* MAIN SECTION*/
+
+#mainSlider {
+  height: 660px;
+  background: url("../img/mainHome.jpg") center center no-repeat;
+  background-size: cover;
+}
+
+.slider {
+  width: 100%;
+}
+
+#mainCaption {
+  height: 660px;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.caption {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+/*FEATURES SECTION*/
+
+#features {
+  margin: 5em 0;
+}
+.featuresTop {
+  margin: auto;
+}
+.sectionHeader {
+  width: 30%;
+  margin: auto;
+  text-align: center;
+  padding: 20px 40px;
+  background-color: #500d16;
+  color: #fff;
+  font-size: 26px;
+  border-bottom: 8px solid #000;
+}
+
+.sectionHeader + p {
+  text-align: center;
+  margin-top: 1em;
+}
+.container {
+  display: flex;
+  justify-content: center;
+}
+.col3 {
+  flex-grow: 1;
+  width: 33.33%;
+  margin: 1em;
+}
+.zoom {
+  width: 100%;
+  overflow: hidden;
+}
+.zoom img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  transition: 0.5s ease;
+}
+.item {
+  text-align: center;
+}
+.itemText {
+  border: 2px solid #500d16;
+  padding: 1em;
+  transition: 0.5s ease;
+}
+
+.item:hover {
+  background-color: #500d16;
+}
+.item:hover .itemText * {
+  color: #fff;
+}
+.item:hover .btnDetails {
+  border-color: #fff;
+}
+.item:hover .zoom img {
+  width: 100%;
+
+  transform: scale(1.2);
+}
+.itemText h3 {
+  font-size: 20px;
+  color: #500d16;
+  text-transform: uppercase;
+  transition: 0.5s ease;
+
+  line-height: 3;
+}
+.itemText p {
+  color: #500d16;
+  line-height: 2;
+  transition: 0.5s ease;
+}
+.btnDetails {
+  color: #500d16;
+  text-decoration: none;
+
+  border: 2px solid #500d16;
+  text-align: center;
+  padding: 5px;
+  transition: 0.5s ease;
+}
+
+/*PARALLAX SECTION*/
+
+#parallax {
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    url("../img/plane2.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+  height: 300px;
+  position: relative;
+}
+.parallaxTop {
+  position: absolute;
+  width: 100%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+}
+
+/*ENGINE SECTION*/
+#engine {
+  margin: 8em 0;
+}
+.col2 {
+  flex-grow: 1;
+  width: 50%;
+  padding: 1em;
+}
+.engineContainer {
+  position: relative;
+}
+.engineContainer img {
+  width: 100%;
+}
+.engineOverlay1 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  /* right: 0;*/
+  bottom: 0;
+  width: 0;
+  height: 100%;
+  background-color: rgba(80, 13, 22, 0.7);
+  transition: 0.3s;
+  overflow: hidden;
+}
+
+.engineOverlay2 {
+  position: absolute;
+  top: 0;
+  right: 0;
+  /* right: 0;*/
+  bottom: 0;
+  width: 0;
+  height: 100%;
+  background-color: rgba(80, 13, 22, 0.7);
+  transition: 0.3s;
+  overflow: hidden;
+}
+
+.engineContainer:hover .engineOverlay1,
+.engineContainer:hover .engineOverlay2 {
+  width: 100%;
+}
+.engineText {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  white-space: nowrap;
+}
+
+/*FOOTER SECTION*/
+
+#footer {
+  background-color: #500d16;
+  padding: 3em 0;
+}
+.footerItem {
+  color: #95a5a6;
+  text-align: center;
+}
+.footerItem h3 {
+  font-size: 18px;
+  letter-spacing: 2px;
+  color: #fff;
+  margin-bottom: 50px;
+}
+.footerItem p {
+  line-height: 1.5;
+}
+
+.socialLinks li {
+  display: inline;
+  font-size: 30px;
+  margin-right: 10px;
+}
+.socialLinks li a {
+  color: #95a5a6;
+
+  transition: 0.3s ease;
+}
+
+.socialLinks li a:hover {
+  color: #fff;
+}
+.footerLinks li a {
+  text-decoration: none;
+  color: #95a5a6;
+  line-height: 2;
+  transition: 0.3s ease;
+}
+
+.footerLinks li a:hover {
+  color: #fff;
+  cursor: pointer;
+}
+
+/*PlANES PAGE*/
+
+/*Slider section*/
+
+#planesSlider {
+  height: 300px;
+  background: url("../img/plane3.jpg") center center no-repeat;
+  background-size: cover;
+}
+#planesCaption {
+  height: 300px;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+/*inspect section*/
+
+#inspect {
+  margin: 5em 0;
+  background-color: #f5f5f5;
+}
+.inspectTop {
+  margin: auto;
+}
+
+.inspectBody .col2 {
+  display: flex;
+  margin-top: 2em;
+}
+.inspectBody .container {
+  width: 100%;
+}
+.inspectImage {
+  width: 40%;
+}
+.inspectImage img {
+  width: 100%;
+}
+.inspectText {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  padding-left: 10px;
+  line-height: 1.5;
+}
+.date {
+  font-style: italic;
+  margin-bottom: 10px;
+}
+.inspectText h4 {
+  color: #500d16;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+.inspectText p {
+  margin-bottom: 10px;
+}
+.inspectText a {
+  text-align: right;
+  text-decoration: none;
+  color: #500d16;
+}
+/*projectX section*/
+
+#project {
+  margin: 5em 0;
+}
+.projectTop {
+  margin: auto;
+}
+
+.projectBody {
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url("../img/engine2.jpg");
+  background-position: center;
+  background-size: cover;
+  height: 500px;
+}
+.projectBody .col2 {
+  position: relative;
+}
+.containerFluid {
+  display: flex;
+  width: 90%;
+  margin: auto;
+}
+.projectText {
+  margin-top: 30%;
+  color: #fff;
+}
+.projectTitle {
+  color: #500d16;
+  margin-bottom: 1em;
+  font-size: 26px;
+  font-weight: bold;
+}
+.projectTitle + p {
+  line-height: 1.5;
+}
+.projectText button {
+  display: inline-block;
+  margin-top: 2em;
+  color: #fff;
+  background-color: #500d16;
+  padding: 15px 30px;
+  border: none;
+}
+.projectHighlight ul li {
+  background-color: #500d16;
+  color: #fff;
+  width: 200px;
+
+  padding: 1em;
+}
+
+/*ABOUT SECTION*/
+
+#history {
+  margin: 5em 0;
+}
+
+.historyTop {
+  margin: auto;
+}
+
+.historyBody .containerFluid {
+  width: 100%;
+  margin-bottom: 20px;
+}
+.historyBody .col2 {
+  display: flex;
+  justify-content: space-between;
+  padding: 0;
+}
+
+.historyDate {
+  flex: 1;
+  background-color: #500d16;
+  color: #fff;
+  font-size: 24px;
+}
+.historyDate p {
+  text-align: center;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.historyImage {
+  flex: 2;
+}
+.historyImage img {
+  width: 100%;
+  height: 100%;
+}
+.historyText {
+  flex: 3;
+  padding-left: 10px;
+}
+.historyText p {
+  line-height: 1.5;
+}
+
+/*team section*/
+#team {
+  margin-bottom: 3em;
+}
+.teamMember {
+  position: relative;
+}
+.teamBody .containerFluid {
+  width: 100%;
+}
+.teamBody .col3 {
+  margin: 0;
+}
+.teamMemberImg {
+  width: 100%;
+}
+.teamMemberOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #500d16;
+  transition: 0.3s ease;
+}
+
+.teamTitle {
+  color: #fff;
+  font-size: 24px;
+  position: relative;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.teamMember:hover .teamMemberOverlay,
+.teamMember:hover .teamTitle {
+  display: none;
+}
+.teamMemberInfo {
+  transition: 0.3s ease;
+}
+.teamMember:hover .teamMemberOverlay {
+  background-color: rgba(red, green, blue, 0);
+}
+.teamMemberInfo {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #500d16;
+  padding: 1em;
+  line-height: 1.5;
+  color: #fff;
+  font-size: 24px;
+}
+.teamMember:hover .teamMemberInfo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 24px;
+  color: #fff;
+
+  padding: 1em;
+  line-height: 1.5;
+}
+.memberSocialLinks {
+  display: flex;
+  justify-content: space-between;
+  font-size: 24px;
+  color: #fff;
+}
+.memberSocialLinks a {
+  color: #fff;
+}
